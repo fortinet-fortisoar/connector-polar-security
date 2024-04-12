@@ -1,0 +1,508 @@
+{
+  "type": "workflow_collections",
+  "data": [
+    {
+      "uuid": "d3b2dcca-1c8e-4e23-bd56-cb7d15fe8936",
+      "@type": "WorkflowCollection",
+      "workflows": [
+        {
+          "@type": "Workflow",
+          "uuid": "56a0b114-3ed0-4fa7-af8c-90f96aede57f",
+          "collection": "/api/3/workflow_collections/d3b2dcca-1c8e-4e23-bd56-cb7d15fe8936",
+          "steps": [
+            {
+              "uuid": "04f31b38-2f03-41e1-be48-257203788a9b",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "56b4bfa2-5827-4ca6-9ea7-61873b6c84fb",
+              "@type": "WorkflowStep",
+              "name": "Get Linked Vendors",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Polar Security",
+                "config": "",
+                "params": [],
+                "version": "1.0.0",
+                "connector": "polar-security",
+                "operation": "get_linked_vendors",
+                "operationTitle": "Get Linked Vendors"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Get a list of all 3rd party vendors connected to cloud workloads.",
+          "name": "Get Linked Vendors",
+          "tag": "#Polar Security",
+          "recordTags": [
+            "Polar",
+            "polar-security"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/04f31b38-2f03-41e1-be48-257203788a9b",
+          "routes": [
+            {
+              "uuid": "00abfb80-955e-4fe2-9749-876967b2ae1e",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Linked Vendors",
+              "sourceStep": "/api/3/workflow_steps/04f31b38-2f03-41e1-be48-257203788a9b",
+              "targetStep": "/api/3/workflow_steps/56b4bfa2-5827-4ca6-9ea7-61873b6c84fb"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "bde93e25-5e7a-486b-9b89-13f84f1ee89f",
+          "collection": "/api/3/workflow_collections/d3b2dcca-1c8e-4e23-bd56-cb7d15fe8936",
+          "steps": [
+            {
+              "uuid": "78e487a7-c4da-48fd-8673-6cbdf22cb4d0",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "65acbfd6-c75e-4df7-8eaa-d3a099442bf0",
+              "@type": "WorkflowStep",
+              "name": "Get Data Stores",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Polar Security",
+                "config": "",
+                "params": {
+                  "limit": 50,
+                  "page_size": "",
+                  "next_token": ""
+                },
+                "version": "1.0.0",
+                "connector": "polar-security",
+                "operation": "get_data_stores",
+                "operationTitle": "Get Data Stores"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Get a list of data stores from Polar Security.",
+          "name": "Get Data Stores",
+          "tag": "#Polar Security",
+          "recordTags": [
+            "Polar",
+            "polar-security"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/78e487a7-c4da-48fd-8673-6cbdf22cb4d0",
+          "routes": [
+            {
+              "uuid": "789d1649-a1fe-4a66-9651-d345392cbd7d",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Data Stores",
+              "sourceStep": "/api/3/workflow_steps/78e487a7-c4da-48fd-8673-6cbdf22cb4d0",
+              "targetStep": "/api/3/workflow_steps/65acbfd6-c75e-4df7-8eaa-d3a099442bf0"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "19c0a8b9-b516-4422-bdc8-c4c353384418",
+          "collection": "/api/3/workflow_collections/d3b2dcca-1c8e-4e23-bd56-cb7d15fe8936",
+          "steps": [
+            {
+              "uuid": "7be9715a-17b5-4f2e-8c0d-7b37c0e372cb",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "a8522c98-a24e-46d0-b9d7-4ad06d030d87",
+              "@type": "WorkflowStep",
+              "name": "Get Data Stores Summary",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Polar Security",
+                "config": "",
+                "params": [],
+                "version": "1.0.0",
+                "connector": "polar-security",
+                "operation": "get_data_stores_summary",
+                "operationTitle": "Get Data Stores Summary"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieve the data store summary from Polar Security.",
+          "name": "Get Data Stores Summary",
+          "tag": "#Polar Security",
+          "recordTags": [
+            "Polar",
+            "polar-security"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/7be9715a-17b5-4f2e-8c0d-7b37c0e372cb",
+          "routes": [
+            {
+              "uuid": "d4d28c11-9b3a-4457-af4a-0a2d13e42d91",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Data Stores Summary",
+              "sourceStep": "/api/3/workflow_steps/7be9715a-17b5-4f2e-8c0d-7b37c0e372cb",
+              "targetStep": "/api/3/workflow_steps/a8522c98-a24e-46d0-b9d7-4ad06d030d87"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "d4ea86e1-1b04-456b-9845-c4d9448877d5",
+          "collection": "/api/3/workflow_collections/d3b2dcca-1c8e-4e23-bd56-cb7d15fe8936",
+          "steps": [
+            {
+              "uuid": "682c1dbc-d2d7-4915-946b-e03c13086cf3",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "0127ceb6-d931-43cd-8c42-de1ae138bcd3",
+              "@type": "WorkflowStep",
+              "name": "Get Vendors Data Stores",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Polar Security",
+                "config": "",
+                "params": {
+                  "vendor_id": "",
+                  "limit": 50,
+                  "page_size": "",
+                  "next_token": ""
+                },
+                "version": "1.0.0",
+                "connector": "polar-security",
+                "operation": "get_vendors_data_stores",
+                "operationTitle": "Get Vendors Data Stores"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Get a list of all vendors data stores.",
+          "name": "Get Vendors Data Stores",
+          "tag": "#Polar Security",
+          "recordTags": [
+            "Polar",
+            "polar-security"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/682c1dbc-d2d7-4915-946b-e03c13086cf3",
+          "routes": [
+            {
+              "uuid": "933f1e87-b98b-4aa1-ba5f-184ce510850f",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Vendors Data Stores",
+              "sourceStep": "/api/3/workflow_steps/682c1dbc-d2d7-4915-946b-e03c13086cf3",
+              "targetStep": "/api/3/workflow_steps/0127ceb6-d931-43cd-8c42-de1ae138bcd3"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "933fa9ee-3021-4dce-9873-5b3c0333c0c0",
+          "collection": "/api/3/workflow_collections/d3b2dcca-1c8e-4e23-bd56-cb7d15fe8936",
+          "steps": [
+            {
+              "uuid": "cc874f6e-f147-456b-ad83-04ddea497a38",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "6f4a6b16-b655-41b2-8584-fe6be76ebae2",
+              "@type": "WorkflowStep",
+              "name": "Get Data Store",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Polar Security",
+                "config": "",
+                "params": {
+                  "store_id": ""
+                },
+                "version": "1.0.0",
+                "connector": "polar-security",
+                "operation": "get_data_store",
+                "operationTitle": "Get Data Store"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Get a data store by specific store ID from Polar Security.",
+          "name": "Get Data Store",
+          "tag": "#Polar Security",
+          "recordTags": [
+            "Polar",
+            "polar-security"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/cc874f6e-f147-456b-ad83-04ddea497a38",
+          "routes": [
+            {
+              "uuid": "f1937bca-d2c3-4161-b65a-4521bab6662c",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Data Store",
+              "sourceStep": "/api/3/workflow_steps/cc874f6e-f147-456b-ad83-04ddea497a38",
+              "targetStep": "/api/3/workflow_steps/6f4a6b16-b655-41b2-8584-fe6be76ebae2"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "c4c99ef8-c60b-4d7f-9466-062d5bf6c475",
+          "collection": "/api/3/workflow_collections/d3b2dcca-1c8e-4e23-bd56-cb7d15fe8936",
+          "steps": [
+            {
+              "uuid": "ecceb435-32a2-4813-bfdb-05471c53f9fc",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "7b09e234-8bdd-41e7-ab5f-ae57bc0983d5",
+              "@type": "WorkflowStep",
+              "name": "Get Vendor Accessible Data Store",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Polar Security",
+                "config": "",
+                "params": [],
+                "version": "1.0.0",
+                "connector": "polar-security",
+                "operation": "get_vendor_accessible_data_store",
+                "operationTitle": "Get Vendor Accessible Data Store"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Get all data stores accessible by 3rd party vendors from Polar Security.",
+          "name": "Get Vendor Accessible Data Store",
+          "tag": "#Polar Security",
+          "recordTags": [
+            "Polar",
+            "polar-security"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/ecceb435-32a2-4813-bfdb-05471c53f9fc",
+          "routes": [
+            {
+              "uuid": "8fb833ea-43f5-4e82-965c-a8ffea347e52",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Vendor Accessible Data Store",
+              "sourceStep": "/api/3/workflow_steps/ecceb435-32a2-4813-bfdb-05471c53f9fc",
+              "targetStep": "/api/3/workflow_steps/7b09e234-8bdd-41e7-ab5f-ae57bc0983d5"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "8e930a45-f696-4f08-bc58-8ef84fca45e3",
+          "collection": "/api/3/workflow_collections/d3b2dcca-1c8e-4e23-bd56-cb7d15fe8936",
+          "steps": [
+            {
+              "uuid": "9487bdce-b8dd-4441-a59a-14b7ba63cc9f",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "0f93e1c1-152e-448a-90e6-3469f5047f11",
+              "@type": "WorkflowStep",
+              "name": "Apply Label",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Polar Security",
+                "config": "",
+                "params": {
+                  "label": "",
+                  "store_id": ""
+                },
+                "version": "1.0.0",
+                "connector": "polar-security",
+                "operation": "apply_label",
+                "operationTitle": "Apply Label"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Apply a label to specific data store in Polar Security.",
+          "name": "Apply Label",
+          "tag": "#Polar Security",
+          "recordTags": [
+            "Polar",
+            "polar-security"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/9487bdce-b8dd-4441-a59a-14b7ba63cc9f",
+          "routes": [
+            {
+              "uuid": "f474ad0b-9c7c-4cd8-9773-c793033b0175",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Apply Label",
+              "sourceStep": "/api/3/workflow_steps/9487bdce-b8dd-4441-a59a-14b7ba63cc9f",
+              "targetStep": "/api/3/workflow_steps/0f93e1c1-152e-448a-90e6-3469f5047f11"
+            }
+          ]
+        }
+      ],
+      "name": "Sample - Polar Security - 1.0.0",
+      "description": "An agentless platform that connects within minutes, Polar Security can automatically find unknown and sensitive data across the cloud.",
+      "visible": true,
+      "recordTags": [
+        "Polar",
+        "polar-security"
+      ]
+    }
+  ]
+}
