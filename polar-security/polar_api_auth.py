@@ -22,14 +22,14 @@ class PolarSecurityAuth:
         self.username = config.get("username")
         self.password = config.get("password")
         self.verify_ssl = config.get('verify_ssl')
-        self.host = config.get("server").strip('/')
+        self.host = config.get("url").strip('/')
         if self.host[:7] == "http://":
             self.host = "https://{0}".format(self.host)
         elif self.host[:8] == "https://":
             self.host = "{0}".format(self.host)
         else:
             self.host = "https://{0}".format(self.host)
-        self.code = config.get("code")
+        
 
     def convert_ts_epoch(self, ts):
         datetime_object = datetime.strptime(ctime(ts), "%a %b %d %H:%M:%S %Y")
@@ -77,9 +77,6 @@ class PolarSecurityAuth:
 
 def acquire_token(self):
     try:
-        # headers = {
-        #     'Content-Type': 'application/x-www-form-urlencoded'
-        # }
         data = {
             'username': self.username,
             'password': self.password
