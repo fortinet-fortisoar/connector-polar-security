@@ -1,0 +1,240 @@
+{
+  "name": "polar-security",
+  "label": "Polar Security",
+  "version": "1.0.0",
+  "description": "An agentless platform that connects within minutes, Polar Security can automatically find unknown and sensitive data across the cloud.",
+  "publisher": "Fortinet",
+  "cs_approved": false,
+  "cs_compatible": true,
+  "category": "Network Security",
+  "icon_small_name": "small.png",
+  "icon_large_name": "large.png",
+  "help_online": "",
+  "configuration": {
+    "fields": [
+      {
+        "name": "url",
+        "title": "Server URL",
+        "type": "text",
+        "editable": true,
+        "visible": true,
+        "required": true,
+        "description": "Specify the Polar Security server URL to connect and perform the automated operations.",
+        "placeholder": "https://api.polar-security.com"
+      },
+      {
+        "name": "username",
+        "title": "Username",
+        "type": "text",
+        "editable": true,
+        "visible": true,
+        "required": true,
+        "description": "Specify the Polar Security username to connect and perform the automated operations."
+      },
+      {
+        "name": "password",
+        "title": "Password",
+        "type": "password",
+        "editable": true,
+        "visible": true,
+        "required": true,
+        "description": "Specify the Polar Security password to connect and perform the automated operations."
+      },
+      {
+        "name": "verify_ssl",
+        "title": "Verify SSL",
+        "type": "checkbox",
+        "editable": true,
+        "visible": true,
+        "required": false,
+        "value": true,
+        "description": "Specifies whether the SSL certificate for the server is to be verified. \nBy default, this option is set to True."
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "get_linked_vendors",
+      "title": "Get Linked Vendors",
+      "annotation": "get_linked_vendors",
+      "description": "Get a list of all 3rd party vendors connected to cloud workloads.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_data_stores",
+      "title": "Get Data Stores",
+      "annotation": "get_data_stores",
+      "description": "Get a list of data stores from Polar Security.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "limit",
+          "title": "Limit",
+          "type": "integer",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "value": 50,
+          "tooltip": "Maximum results to return. The default value is 50.",
+          "description": "Specify the maximum results to return from Polar Security. The default value is 50."
+        },
+        {
+          "name": "page_size",
+          "title": "Page Size",
+          "type": "integer",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "maximum results to return per page. The default value is 50.",
+          "description": "Specify the maximum results to return per page from Polar Security. The default value is 50."
+        },
+        {
+          "name": "next_token",
+          "title": "Next Token",
+          "type": "integer",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the hash value for the next page.",
+          "description": "Specify the hash value for the next page from Polar Security."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_data_stores_summary",
+      "title": "Get Data Stores Summary",
+      "annotation": "get_data_stores_summary",
+      "description": "Retrieve the data store summary from Polar Security.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_vendors_data_stores",
+      "title": "Get Vendors Data Stores",
+      "annotation": "get_vendors_data_stores",
+      "description": "Get a list of all vendors data stores.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "vendor_id",
+          "title": "Vendor ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the vendor ID retrieved from action Get Linked Vendors.",
+          "description": "Specify the vendor ID retrieved from action Get Linked Vendors."
+        },
+        {
+          "name": "limit",
+          "title": "Limit",
+          "type": "integer",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "value": 50,
+          "tooltip": "Maximum results to return. The default value is 50.",
+          "description": "Specify the maximum results to return from Polar Security. The default value is 50."
+        },
+        {
+          "name": "page_size",
+          "title": "Page Size",
+          "type": "integer",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "maximum results to return per page. The default value is 50.",
+          "description": "Specify the maximum results to return per page from Polar Security. The default value is 50."
+        },
+        {
+          "name": "next_token",
+          "title": "Next Token",
+          "type": "integer",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the hash value for the next page.",
+          "description": "Specify the hash value for the next page from Polar Security."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_data_store",
+      "title": "Get Data Store",
+      "annotation": "get_data_store",
+      "description": "Get a data store by specific store ID from Polar Security.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "store_id",
+          "title": "Store ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the store ID to fetch from Polar Security.",
+          "description": "Specify the store ID to fetch from Polar Security."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_vendor_accessible_data_store",
+      "title": "Get Vendor Accessible Data Store",
+      "annotation": "get_vendor_accessible_data_store",
+      "description": "Get all data stores accessible by 3rd party vendors from Polar Security.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [],
+      "output_schema": {}
+    },
+    {
+      "operation": "apply_label",
+      "title": "Apply Label",
+      "annotation": "apply_label",
+      "description": "Apply a label to specific data store in Polar Security.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "label",
+          "title": "Label",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the 256 character max string.",
+          "description": "Specify the 256 character max string."
+        },
+        {
+          "name": "store_id",
+          "title": "Store ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the store ID to which the label to apply in Polar Security.",
+          "description": "Specify the store ID to which the label to apply in Polar Security."
+        }
+      ],
+      "output_schema": {}
+    }
+  ]
+}
