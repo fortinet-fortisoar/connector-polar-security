@@ -82,7 +82,7 @@
           "required": false,
           "value": 50,
           "tooltip": "Maximum results to return. The default value is 50.",
-          "description": "Specify the maximum results to return from Polar Security. The default value is 50."
+          "description": "(Optional) Specify the maximum results to return from Polar Security. The default value is 50."
         },
         {
           "name": "page_size",
@@ -92,7 +92,7 @@
           "visible": true,
           "required": false,
           "tooltip": "maximum results to return per page. The default value is 50.",
-          "description": "Specify the maximum results to return per page from Polar Security. The default value is 50."
+          "description": "(Optional) Specify the maximum results to return per page from Polar Security. The default value is 50."
         },
         {
           "name": "next_token",
@@ -102,7 +102,7 @@
           "visible": true,
           "required": false,
           "tooltip": "Specify the hash value for the next page.",
-          "description": "Specify the hash value for the next page from Polar Security."
+          "description": "(Optional) Specify the hash value for the next page from Polar Security."
         }
       ],
       "output_schema": {}
@@ -146,7 +146,7 @@
           "required": false,
           "value": 50,
           "tooltip": "Maximum results to return. The default value is 50.",
-          "description": "Specify the maximum results to return from Polar Security. The default value is 50."
+          "description": "(Optional) Specify the maximum results to return from Polar Security. The default value is 50."
         },
         {
           "name": "page_size",
@@ -156,7 +156,7 @@
           "visible": true,
           "required": false,
           "tooltip": "maximum results to return per page. The default value is 50.",
-          "description": "Specify the maximum results to return per page from Polar Security. The default value is 50."
+          "description": "(Optional) Specify the maximum results to return per page from Polar Security. The default value is 50."
         },
         {
           "name": "next_token",
@@ -166,7 +166,7 @@
           "visible": true,
           "required": false,
           "tooltip": "Specify the hash value for the next page.",
-          "description": "Specify the hash value for the next page from Polar Security."
+          "description": "(Optional) Specify the hash value for the next page from Polar Security."
         }
       ],
       "output_schema": {}
@@ -221,7 +221,7 @@
           "visible": true,
           "required": true,
           "tooltip": "Specify the 256 character max string.",
-          "description": "Specify the 256 character max string."
+          "description": "Specify the 256 character max string to be used as label for the data store in Polar Security."
         },
         {
           "name": "store_id",
