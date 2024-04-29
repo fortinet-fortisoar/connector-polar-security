@@ -94,7 +94,7 @@ None.
  The output contains a non-dictionary value.
 ### operation: Apply Label
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Label</td><td>Specify the 256 character max string.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Label</td><td>Specify the 256 character max string to be used as label for the data store in Polar Security.
 </td></tr><tr><td>Store ID</td><td>Specify the store ID to which the label to apply in Polar Security.
 </td></tr></tbody></table>
 
